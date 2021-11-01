@@ -27,30 +27,36 @@ namespace BankingApp
             this.balance = balance;
         }
 
-        public virtual void Withdraw(decimal amount)
+        public virtual decimal Withdraw(decimal amount)
         {
             if (amount > 0m && amount <= balance)
             {
                 balance -= amount;
+                
             }
+            return balance;
         }
 
-        public  void Deposit(decimal amount)
+        public decimal Deposit(decimal amount)
         {
             if(amount > 0m)
             {
                 balance += amount;
+
             }
+            return balance;
         }
 
-        public void Transfer(Account accountTo, Account accountFrom, decimal amount)
+        public virtual int Transfer(Account accountTo, Account accountFrom, decimal amount)
 
         {
-            if(accountFrom.balance > 0 && accountFrom.balance >= amount)
+            if(amount > 0 && accountFrom.balance >= amount && accountFrom.accountNumber != accountTo.accountNumber)
             {
                 accountFrom.Withdraw(amount);
                 accountTo.Deposit(amount);
+                return 1;
             }
+            return -1;
         }
     }
 }

@@ -17,12 +17,27 @@ namespace BankingApp
 
         }
 
-        public override void Withdraw(decimal amount)
+        public override decimal Withdraw(decimal amount)
         {
-            if (amount > 0 && amount < 500)
+            if (amount > 0 && amount <= 500)
             {
                 base.Withdraw(amount);
             }
+            return balance;
+        }
+
+        public override int Transfer(Account accountTo, Account accountFrom, decimal amount)
+        {
+            if(amount <= 500)
+            {
+                 base.Transfer(accountTo, accountFrom, amount);
+                return 1;
+            }
+
+            return -1;
+
+
+           
         }
     }
 }
