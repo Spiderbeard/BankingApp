@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankingApp
 {
-    class Investment : Account
+    public abstract class  Investment : Account
     {
         public Investment(string owner, int accountNumber) : base(owner, accountNumber)
         {
