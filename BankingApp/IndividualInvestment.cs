@@ -23,7 +23,7 @@ namespace BankingApp
             {
                 base.Withdraw(amount);
             }
-            return balance;
+            return Balance;
         }
 
         public override int Transfer(Account accountTo, Account accountFrom, decimal amount)

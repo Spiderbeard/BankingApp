@@ -20,7 +20,7 @@ namespace BankingApp.BankingAppTests
 
             // Assert
 
-            Assert.AreEqual(100, checking.balance);
+            Assert.AreEqual(100, checking.Balance);
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace BankingApp.BankingAppTests
 
             // Assert
 
-            Assert.AreEqual(500, checking.balance);
+            Assert.AreEqual(500, checking.Balance);
         }
 
         [TestMethod]
@@ -51,8 +51,8 @@ namespace BankingApp.BankingAppTests
 
             // Assert
 
-            Assert.AreEqual(450, checkingTo.balance);
-            Assert.AreEqual(150, checkingFrom.balance);
+            Assert.AreEqual(450, checkingTo.Balance);
+            Assert.AreEqual(150, checkingFrom.Balance);
         }
     }
 }

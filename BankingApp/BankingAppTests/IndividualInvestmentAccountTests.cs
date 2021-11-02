@@ -20,7 +20,7 @@ namespace BankingApp.BankingAppTests
 
             //Assert
 
-            Assert.AreEqual(600, investment.balance);
+            Assert.AreEqual(600, investment.Balance);
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace BankingApp.BankingAppTests
 
             //Assert
 
-            Assert.AreEqual(1500, investment.balance);
+            Assert.AreEqual(1500, investment.Balance);
         }
 
         [TestMethod]
@@ -51,8 +51,8 @@ namespace BankingApp.BankingAppTests
 
             //Assert
 
-            Assert.AreEqual(600, investmentFrom.balance);
-            Assert.AreEqual(1400, investmentTo.balance);
+            Assert.AreEqual(600, investmentFrom.Balance);
+            Assert.AreEqual(1400, investmentTo.Balance);
         }
 
         [TestMethod]
@@ -68,8 +68,8 @@ namespace BankingApp.BankingAppTests
 
             //Assert
 
-            Assert.AreEqual(1000, investmentFrom.balance);
-            Assert.AreEqual(1000, investmentTo.balance);
+            Assert.AreEqual(1000, investmentFrom.Balance);
+            Assert.AreEqual(1000, investmentTo.Balance);
         }
     }
 }
